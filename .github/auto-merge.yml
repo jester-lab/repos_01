@@ -50,6 +50,7 @@ mergeMethod: merge
 # commits.
 # This settings is ignored when `mergeMethod` is set to `rebase`.
 mergeCommitMessage: |
+  merged by 'probot-auto-merge'
   {title} (#{number})
 
   {body}
