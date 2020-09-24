@@ -1,4 +1,4 @@
-sourceBranch: "master"
+sourceBranch: "main"
 targetBranchPrefix: "staging/"
 mergeCommitMessage: "Automatic merge"
 pullRequest:
