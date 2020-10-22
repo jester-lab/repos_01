@@ -1,0 +1,14 @@
+---
+conditions:
+  all:
+    - fact: payload.issue.user.login
+      operator: equal
+      value: jefeish
+    # Prevent loops
+    - fact: payload.sender.type
+      operator: notEqual
+      value: Bot
+event:
+  type: createComment-by-rule
+  params:
+    data: we got a message from a Repo Rule [issues.yml]!
