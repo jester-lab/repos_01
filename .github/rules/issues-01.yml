@@ -1,14 +1,21 @@
 ---
 conditions:
   all:
-    - fact: payload.issue.user.login
-      operator: equal
-      value: jefeish
-    # Prevent loops
-    - fact: payload.sender.type
-      operator: notEqual
-      value: Bot
+    # Title Starts with '.bug'
+    - fact: payload.issue.title
+      operator: regex
+      value: ^\.bug
+    # Less than 15 days until due date
+    - fact: payload.issue.milestone.due_on
+      operator: dateLessThan
+      value: 15
+    # created more than a year ago
+    - fact: payload.repository.created_at
+      operator: dateGreaterThan
+      value: 365
 event:
-  type: createComment-by-rule
+  type: createIssueLabels
   params:
-    data: we got a message from a Repo Rule [issues-01.yml]!
+    data:
+      - bug
+      - question
