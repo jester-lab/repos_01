@@ -9,6 +9,6 @@ conditions:
       operator: notEqual
       value: Bot
 event:
-  type: createComment-by-rule
+  type: createIssueComment
   params:
     data: we got a message from a Repo Rule [issues.yml]!
