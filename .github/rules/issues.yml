@@ -11,4 +11,4 @@ conditions:
 event:
   type: createIssueComment
   params:
-    data: this is a message from a Repo Rule [issues.yml]!
+    data: This is a message from a Repo Rule!
