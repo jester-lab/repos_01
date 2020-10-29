@@ -1,0 +1,12 @@
+---
+conditions:
+    all:
+    - fact: payload.issue.title
+      operator: includes
+      value: bug
+event:
+    type: createIssueLabels
+    params:
+        data:
+        - bug
+        - question
