@@ -1,8 +1,8 @@
     conditions:
         all:
         - fact: payload.issue.title
-          operator: includes
-          value: bug
+          operator: regex
+          value: ^\[bug\]
         # Prevent loops
         - fact: payload.sender.type
           operator: notEqual
