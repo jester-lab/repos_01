@@ -8,7 +8,7 @@
           operator: notEqual
           value: Bot
     event:
-        type: createIssueLabels
+        type: issuesAddLabels
         params:
             data:
             - bug
