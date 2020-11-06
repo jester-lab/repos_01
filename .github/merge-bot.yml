@@ -1,0 +1,6 @@
+sourceBranch: "main"
+targetBranchPrefix: "staging/"
+mergeCommitMessage: "Automatic merge"
+pullRequest:
+  title: "Automatic merge failed"
+  body: "Human, please help!"

@@ -1,0 +1,15 @@
+conditions:
+  all:
+    - fact: payload.issue.title
+      operator: includes
+      value: new
+    # Prevent loops
+    - fact: payload.sender.type
+      operator: notEqual
+      value: Bot
+event:
+  type: issuesCreate
+  params:
+    data:
+    - This is a new Bot Issue
+    - a simple test
